@@ -1,0 +1,11 @@
+{
+    "3": {
+        "name": "Holz"
+    },
+    "4": {
+        "name": "L\u00f6ffel"
+    },
+    "5": {
+        "name": "Hammer"
+    }
+}

@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+body
+{
+    background: #ffffff;
+}
+header
+{
+    height: 100px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu
+{
+    margin-left: 50px;
+}
+.menu a
+{
+    margin-left: 200px;
+    font-size: 2em;
+    text-decoration: none;
+    color: black;
+}
+.shopcart
+{
+    margin-right: 50px;
+}
+.shopcart a
+{
+    color: black;
+    font-size: 3em;
+}
+.content
+{
+    padding: 150px;
+}
+.container
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+}
+.container .box
+{
+    display: flex;
+    justify-content: center;
+    width: 900px;
+    height: 400px;
+    background: #00000005;
+    box-shadow: 0 0 10px black;
+    border-radius: 20px;
+    position: relative;
+}
+.container .box img
+{
+    width: 30%;
+    height: 100%;
+    margin-top: -110px;
+    padding-left: 10px;
+    padding-right: 10px;
+    filter: drop-shadow(0 25px 15px rgba(0,0,0,0.5));
+}
+.box form
+{
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.box form button
+{
+    margin-left: 50px;
+    margin-right: 50px;
+    font-size: 1.5em;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background: #006472;
+}
+.card
+{
+    margin: 20px;
+    padding: 20px;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 8px;
+}
+.card a
+{
+    text-decoration: none;
+    position: absolute;
+    right: 20px;
+    color: black;
+    background: #ff7300;
+    padding: 20px;
+    border-radius: 10px;
+}
+.card a:hover
+{
+    background: #f00;
+}
+.card img
+{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+.card b:nth-child()
+{
+    padding-left: 30px;
+    font-size: 1.5em;
+}
+.speaker
+{
+    background: white;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.7);
+    border-radius: 20px;
+    margin-top: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.speaker p
+{
+    font-size: 1.5em;
+    font-weight: 900;
+    margin-left: 70px;
+}
+.speaker img
+{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transform: scale(0.9);
+}
+.speaker a
+{
+    position: absolute;
+    right: 0;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    background: #123;
+    right: 10px;
+    color: white;
+    margin-top: 10px;
+}
+.speaker a:nth-child(3)
+{
+    top: 0px;
+}
+.speaker a:nth-child(4)
+{
+    bottom: 10px;
+    background: green;
+}
