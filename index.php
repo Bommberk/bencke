@@ -5,18 +5,6 @@
     <title>Bencke</title>
     <link rel="stylesheet" href="assets/style/style.css">
 
-    <style>
-
-        
-.question
-{
-    padding: 200px;
-}
-.question form
-{
-    font-size: 1.5em;
-}
-    </style>
 
 </head>
 <body>
@@ -99,7 +87,7 @@
             ";
         }else if($_GET["page"] == "question"){
             echo "<p>Hier kannst du Produkte anfragen die nicht im Shop sind!</p>
-                    <div class'question'>
+                    <div class='question'>
                         <form action='?page=shopcart' method='POST'>
                             <input name='name' placeholder='Produktname'><br>
                             <button type='submit'>Fertig</button>
