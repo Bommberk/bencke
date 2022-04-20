@@ -173,8 +173,13 @@ header
 .question
 {
     padding: 200px;
+    margin-left: 500px;
 }
-.question form
+.question input
+{
+    font-size: 1.5em;
+}
+.question button
 {
     font-size: 1.5em;
 }
