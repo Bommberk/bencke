@@ -1,11 +1,11 @@
-{
-    "3": {
-        "name": "Holz"
+[
+    {
+        "name": "Stift"
     },
-    "4": {
-        "name": "L\u00f6ffel"
+    {
+        "name": "Stift"
     },
-    "5": {
-        "name": "Hammer"
+    {
+        "name": "Stift"
     }
-}
+]

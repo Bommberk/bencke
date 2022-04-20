@@ -5,6 +5,19 @@
     <title>Bencke</title>
     <link rel="stylesheet" href="assets/style/style.css">
 
+    <style>
+
+        
+.question
+{
+    padding: 200px;
+}
+.question form
+{
+    font-size: 1.5em;
+}
+    </style>
+
 </head>
 <body>
 
@@ -12,6 +25,7 @@
         <div class="menu">
             <a href="index.php?page=start">Start</a>
             <a href="index.php?page=product">Produkte</a>
+            <a href="index.php?page=question">Anfragen</a>
             <a href="index.php?page=speaker">Ansprechpartner</a>
         </div>
         <div class="shopcart">
@@ -42,6 +56,9 @@
 
         if($_GET["page"] == "product"){
             $headline = "Produkte";
+        }
+        if($_GET["page"] == "question"){
+            $headline = "Anfragen";
         }
         if($_GET["page"] == "shopcart"){
             $headline = "Warenkorb";
@@ -80,6 +97,15 @@
                     </div>
                 </div>
             ";
+        }else if($_GET["page"] == "question"){
+            echo "<p>Hier kannst du Produkte anfragen die nicht im Shop sind!</p>
+                    <div class'question'>
+                        <form action='?page=shopcart' method='POST'>
+                            <input name='name' placeholder='Produktname'><br>
+                            <button type='submit'>Fertig</button>
+                        </form>
+                    </div>  
+            ";
         }
         if($_GET['page'] == "delete"){
             echo "<p>Dein Kontakt wurde gelöscht</p>";
@@ -116,7 +142,7 @@
         }else if($_GET["page"] == "speaker"){
             echo "<p>Hier ist der Ansprechpartner für ihre Fragen</p>
                     <div class='speaker'>
-                        <img src='assets/img/cooler_Ben.JPG'>
+                        <img src='assets/img/cooler_Ben.jpg'>
                         <p>Ben J. Mohncke</p>
                         <a href='tel:015731107874'>Anrufen</a>
                         <a href='mailto:benmohncke@gmail.com'>Mailen</a>

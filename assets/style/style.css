@@ -23,11 +23,11 @@ header
 }
 .menu
 {
-    margin-left: 25px;
+    margin-left: 50px;
 }
 .menu a
 {
-    margin-left: 100px;
+    margin-left: 50px;
     font-size: 2em;
     text-decoration: none;
     color: black;
@@ -121,7 +121,7 @@ header
     border-radius: 50%;
     border: 3px solid white;
 }
-.card b:nth-child()
+.card b:nth-child(3)
 {
     padding-left: 30px;
     font-size: 1.5em;
@@ -169,4 +169,12 @@ header
 {
     bottom: 10px;
     background: green;
+}
+.question
+{
+    padding: 200px;
+}
+.question form
+{
+    font-size: 1.5em;
 }
