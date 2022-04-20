@@ -130,7 +130,7 @@
         }else if($_GET["page"] == "speaker"){
             echo "<p>Hier ist der Ansprechpartner für ihre Fragen</p>
                     <div class='speaker'>
-                        <img src='assets/img/cooler_Ben.jpg'>
+                        <img src='assets/img/cooler_Ben.JPG'>
                         <p>Ben J. Mohncke</p>
                         <a href='tel:015731107874'>Anrufen</a>
                         <a href='mailto:benmohncke@gmail.com'>Mailen</a>
