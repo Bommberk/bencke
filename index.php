@@ -5,6 +5,18 @@
     <title>Bencke</title>
     <link rel="stylesheet" href="assets/style/style.css">
 
+    <style>
+
+        
+.question
+{
+    padding: 200px;
+}
+.question form
+{
+    font-size: 1.5em;
+}
+    </style>
 
 </head>
 <body>
@@ -66,19 +78,19 @@
             echo "<p>Auf dieser Seite sind die Produkte!</p>
                 <div class='container'>
                     <div class='box'>
-                        <img src='assets/img/hammer.jpg'>
-                        <img src='assets/img/spice.jpg'>
-                        <img src='assets/img/wood.jpg'>
+                        <img src='assets/img/kerzenständer_2.JPEG'>
+                        <img src='assets/img/schale.JPEG'>
+                        <img src='assets/img/honig.JPEG'>
 
                         <form action='?page=shopcart' method='POST'>
                             <div>
-                            <button type='submit' value='Hammer' name='name'>In den Warenkorb</button>
+                            <button type='submit' value='Kerzenständer' name='name'>In den Warenkorb</button>
                             </div>
                             <div>
-                            <button type='submit' value='Löffel' name='name'>In den Warenkorb</button>
+                            <button type='submit' value='Schale' name='name'>In den Warenkorb</button>
                             </div>
                             <div>
-                            <button type='submit' value='Holz' name='name'>In den Warenkorb</button>
+                            <button type='submit' value='Honiglöffel' name='name'>In den Warenkorb</button>
                             </div>
                         </form>
 

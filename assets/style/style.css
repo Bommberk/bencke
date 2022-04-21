@@ -121,7 +121,7 @@ header
     border-radius: 50%;
     border: 3px solid white;
 }
-.card b:nth-child(3)
+.card b:nth-child(2)
 {
     padding-left: 30px;
     font-size: 1.5em;

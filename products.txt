@@ -1,11 +1,5 @@
-[
-    {
-        "name": "Stift"
-    },
-    {
-        "name": "Stift"
-    },
-    {
+{
+    "2": {
         "name": "Stift"
     }
-]
+}
