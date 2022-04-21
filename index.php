@@ -4,19 +4,7 @@
     <meta charset="UTF-8" http-equiv="refresh" content="">
     <title>Bencke</title>
     <link rel="stylesheet" href="assets/style/style.css">
-
-    <style>
-
-        
-.question
-{
-    padding: 200px;
-}
-.question form
-{
-    font-size: 1.5em;
-}
-    </style>
+    <link rel="shortcut icon" href="bencke_logo.ico" type="image/x-icon">
 
 </head>
 <body>
