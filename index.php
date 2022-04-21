@@ -4,7 +4,7 @@
     <meta charset="UTF-8" http-equiv="refresh" content="">
     <title>Bencke</title>
     <link rel="stylesheet" href="assets/style/style.css">
-    <link rel="shortcut icon" href="bencke_logo.png">
+    <link rel="shortcut icon" href="assets/img/bencke_logo.png">
 
 </head>
 <body>
