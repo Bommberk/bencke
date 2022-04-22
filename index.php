@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="assets/style/style.css">
     <link rel="shortcut icon" href="assets/img/bencke_logo.png">
 
+
 </head>
 <body>
 
@@ -65,23 +66,49 @@
         }else if($_GET["page"] == "product"){
             echo "<p>Auf dieser Seite sind die Produkte!</p>
                 <div class='container'>
+                    
                     <div class='box'>
-                        <img src='assets/img/kerzenständer_2.JPEG'>
-                        <img src='assets/img/schale.JPEG'>
-                        <img src='assets/img/honig.JPEG'>
+                        <img src='assets/img/schale.JPEG' alt='Holzschale'>
+                        <div class='info'>
+                            <h1>Holzschale</h1>
+                            <p>Eine tolle Holzschale die aus reiner manpower gemacht wurde!</p>
+                            <form action='?page=shopcart' method='POST'>
+                                <button type='submit' name='name' value='Holzschale'>In den Warenkorb</button>
+                            </form>
+                        </div>
+                    </div>
 
-                        <form action='?page=shopcart' method='POST'>
-                            <div>
-                            <button type='submit' value='Kerzenständer' name='name'>In den Warenkorb</button>
-                            </div>
-                            <div>
-                            <button type='submit' value='Schale' name='name'>In den Warenkorb</button>
-                            </div>
-                            <div>
-                            <button type='submit' value='Honiglöffel' name='name'>In den Warenkorb</button>
-                            </div>
-                        </form>
+                    <div class='box'>
+                        <img src='assets/img/honig.JPEG' alt='Honiglöffel'>
+                        <div class='info'>
+                            <h1>Honiglöffel</h1>
+                            <p>Ein toller Honiglöffel der aus reiner manpower gemacht wurde!</p>
+                            <form action='?page=shopcart' method='POST'>
+                                <button type='submit' name='name' value='Honiglöffel'>In den Warenkorb</button>
+                            </form>
+                        </div>
+                    </div>
 
+                    <div class='box'>
+                        <img src='assets/img/stift.JPEG' alt='Holzstift'>
+                        <div class='info'>
+                            <h1>Holzstift</h1>
+                            <p>Ein toller Holzstift der aus reiner manpower gemacht wurde!</p>
+                            <form action='?page=shopcart' method='POST'>
+                                <button type='submit' name='name' value='Holzstift'>In den Warenkorb</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class='box'>
+                        <img src='assets/img/kerzenständer_2.JPEG' alt='Kerzenständer'>
+                        <div class='info'>
+                            <h1>Kerzenständer</h1>
+                            <p>Ein toller Kerzenständer der aus reiner manpower gemacht wurde!</p>
+                            <form action='?page=shopcart' method='POST'>
+                                <button type='submit' name='name' value='Kerzenständer'>In den Warenkorb</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             ";
@@ -146,6 +173,7 @@
 
     ?>
     </div>
+
     
     <script src="https://kit.fontawesome.com/350675982b.js" crossorigin="anonymous"></script>
     
