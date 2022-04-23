@@ -1,0 +1,8 @@
+{
+    "1": {
+        "name": "Holzschale"
+    },
+    "2": {
+        "name": "Kerzenst\u00e4nder"
+    }
+}

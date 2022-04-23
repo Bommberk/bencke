@@ -6,9 +6,136 @@
     <link rel="stylesheet" href="assets/style/style.css">
     <link rel="shortcut icon" href="assets/img/bencke_logo.png">
 
+    <style>
+        .cash 
+        {
+            position: absolute;
+            right: 170px;
+            text-decoration: none;
+            background: black;
+            font-size: 1.3em;
+            padding: 15px 10px;
+            transition: 0.3s;
+            transition-delay: 0.1s;
+        }
+        .cash::before
+        {
+            content: 'Zur Kasse';
+            position: absolute;
+            inset: 4px;
+            background: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.3s;
+        }
+        .cash:hover
+        {
+            background: grey;
+        }
+        .cash:hover::before
+        {
+            background: grey;
+        }
+        .cash-card 
+        {
+            margin: 100px;
+            background: transparent;
+            padding: 20px;
+            border: 1px solid black;
+            border-left: none;
+            border-right: none;
+            display: flex;
+            justify-content: space-between;
+        }
+        .cash-card p,
+        .cash-card b
+        {
+            font-size: 1.2em;
+        }
+        .recome 
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 50vh;
+        }
+        .recome a 
+        {
+            text-decoration: none;
+            padding: 40px;
+            color: black;
+            font-size: 2em;
+            background: #a87e4a;
+        }
+        .buy
+        {
+            text-decoration: none;
+            background: black;
+            padding: 15px 40px;
+            position: absolute;
+            transition: 0.3s;
+            transition-delay: 0.1s;
+            right: 250px;
+            font-size: 1.4em;
+        }
+        .buy::before
+        {
+            content: 'Kaufen';
+            position: absolute;
+            inset: 4px;
+            background: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.3s;
+        }
+        .buy:hover
+        {
+            background: grey;
+        }
+        .buy:hover::before
+        {
+            background: grey;
+        }
+        .abbruch
+        {
+            text-decoration: none;
+            background: grey;
+            padding: 15px 40px;
+            position: absolute;
+            transition: 0.3s;
+            transition-delay: 0.1s;
+            left: 250px;
+            font-size: 1.4em;
+        }
+        .abbruch::before
+        {
+            content: 'Abbrechen';
+            position: absolute;
+            inset: 4px;
+            background: grey;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.3s;
+        }
+        .abbruch:hover
+        {
+            background: black;
+        }
+        .abbruch:hover::before
+        {
+            background: black;
+        }
+    </style>
+
 
 </head>
-<body>
+<body onload="weiter()">
 
     <header>
         <div class="menu">
@@ -28,8 +155,8 @@
         $headline = "Herzlich Willkommen";
         $products = [];
 
-        if(file_exists("products.txt")){
-            $text = file_get_contents("products.txt", true);
+        if(file_exists("warenkorb.txt")){
+            $text = file_get_contents("warenkorb.txt", true);
             $products = json_decode($text, true);
         }
 
@@ -40,7 +167,7 @@
                 "name" => $_POST["name"]
             ];
             array_push($products, $newProduct);
-            file_put_contents("products.txt", json_encode($products, JSON_PRETTY_PRINT));
+            file_put_contents("warenkorb.txt", json_encode($products, JSON_PRETTY_PRINT));
         }
 
         if($_GET["page"] == "product"){
@@ -58,6 +185,12 @@
         if($_GET["page"] == "speaker"){
             $headline = "Ansprechpartner";
         }
+        if($_GET["page"] == "cash"){
+            $headline = "Kasse.";
+        }
+        if($_GET["page"] == "bought"){
+            $headline = "Vielen Dank für ihren Kauf!";
+        }
 
         echo "<h1>$headline</h1>";
 
@@ -72,6 +205,7 @@
                         <div class='info'>
                             <h1>Holzschale</h1>
                             <p>Eine tolle Holzschale die aus reiner manpower gemacht wurde!</p>
+                            <p class='preis'>Preis: 30€</p>
                             <form action='?page=shopcart' method='POST'>
                                 <button type='submit' name='name' value='Holzschale'>In den Warenkorb</button>
                             </form>
@@ -128,7 +262,7 @@
 
             unset($products[$index]);
 
-            file_put_contents("products.txt", json_encode($products, JSON_PRETTY_PRINT));
+            file_put_contents("warenkorb.txt", json_encode($products, JSON_PRETTY_PRINT));
         }
         else if($_GET["page"] == "shopcart"){
             echo "<p>Hier ist dein Warenkorb</p>";
@@ -142,10 +276,12 @@
                             <b>$name</b>
 
                             <a class='delete' href='?page=delete&delete=$index'>Löschen</a>
-
                         </div>
-                ";
+                    ";
+                
             }
+            echo "<a class='cash' href='index.php?page=cash'>Weiter zur Kasse</a>";
+
         }else if($_GET["page"] == "delete"){
             echo "Das Produkt wurde erfolgreich entfernt";
             
@@ -153,7 +289,7 @@
 
             unset($products[$index]);
 
-            file_put_contents("products.txt", json_encode($products, JSON_PRETTY_PRINT));
+            file_put_contents("warenkorb.txt", json_encode($products, JSON_PRETTY_PRINT));
         }else if($_GET["page"] == "speaker"){
             echo "<p>Hier ist der Ansprechpartner für ihre Fragen</p>
                     <div class='speaker'>
@@ -169,10 +305,33 @@
                         <a href='mailto:jim.mohncke@gmail.com'>Mailen</a>
                     </div>
             ";
+        }else if($_GET["page"] == "cash"){
+            
+            foreach($products as $index=>$row){
+                $name = $row["name"];
+
+                echo "
+                        <div class='cash-card'>
+                            <p>Produkt:</p><b>$name</b>
+                            <p>Preis:</p><b>Verhandelbar</b>
+                        </div>
+                    ";
+                
+            }
+            echo "<a class='abbruch' href='index.php?page=shopcart'>Abbrechen</a>";
+            echo "<a class='buy' href='index.php?page=bought'>Kaufen</a>";
+        }else if($_GET["page"] == "bought"){
+            echo "
+            <div class='recome'>
+                <a href='index.php?page=start'>Zurück zur Startseite</a>
+            </div>
+            ";
         }
 
     ?>
     </div>
+
+    <script src="assets/javascript/script.js"></script>
 
     
     <script src="https://kit.fontawesome.com/350675982b.js" crossorigin="anonymous"></script>
