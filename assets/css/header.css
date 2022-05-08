@@ -1,0 +1,78 @@
+header
+{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: transparent;
+    padding: 40px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.5s;
+    height: 140px;
+    z-index: 100000;
+    color: #fff;
+}
+header.sticky
+{
+    background: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    height: 70px;
+    color: #000;
+    padding: 20px;
+}
+header .list
+{
+    display: flex;
+    list-style: none;
+}
+header a
+{
+    color: #fff;
+    font-size: 1.5em;
+    text-decoration: none;
+    margin-left: 20px;
+}
+header.sticky a
+{
+    color: black;
+}
+    
+@media(max-width:1290px)
+{
+    header .list a
+    {
+        display: none;
+    }
+    header .icon
+    {
+        display: flex !important;
+        justify-content: center;
+    }
+}
+header .icon
+{
+    display: flex;
+    justify-content: center;
+    display: none;
+    cursor: pointer;
+}
+header .icon .fa-solid
+{
+    position: absolute;
+    font-size: 2em;
+}
+
+header .icon .fa-xmark
+{
+    opacity: 0;
+}
+header .icon .fa-xmark.menubar
+{
+    opacity: 1;   
+}
+header .icon .fa-bars.menubar
+{
+    opacity: 0;
+}

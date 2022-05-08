@@ -1,0 +1,19 @@
+.container
+{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+}
+.container h1
+{
+    letter-spacing: 5px;
+    font-size: 4em;    
+    font-family: 'Bebas Neue', cursive;
+}
+.prices
+{
+    display: block;
+    margin-top: 20px;
+    font-size: 2em;
+}
