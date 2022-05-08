@@ -10,9 +10,6 @@
     <link rel="stylesheet" href="assets/css/bars.css">
     <link rel="shortcut icon" href="assets/img/bencke_logo.ico" type="image/x-icon">
 
-    <style>
-        
-    </style>
 
 </head>
 <body>
